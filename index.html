@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free online calculators for math–addition, subtraction, percent etc.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tone.js for sound effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.min.js"></script>
+    <!-- Description -->
+    <meta name="description" content="A simple and user-friendly calculator for basic arithmetic operations including addition, subtraction, multiplication, division, modulo, square, and more.">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body class="font-inter">
+    <!-- Header -->
+    <header class="p-5 shadow-xl">
+        <div class="container mx-auto">
+            <h1 class="text-4xl font-bold tracking-widest uppercase">Neon Calculator</h1>
+            <button id="theme-toggle" class="text-2xl p-2 rounded-full" aria-label="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area: Calculator and History -->
+    <div class="main-content-area">
+        <div class="calculator">
+            <!-- Display -->
+            <div class="calculator-display">
+                <div data-previous-operand class="previous-operand"></div>
+                <div data-current-operand class="current-operand">0</div>
+            </div>
+
+            <!-- Buttons Grid -->
+            <div class="calculator-grid grid grid-cols-4 gap-4">
+                <button data-clear class="clear">AC</button>
+                <button data-backspace class="backspace">DEL</button>
+                <button data-operator class="operator" data-op="%">%</button>
+                <button data-operator class="operator" data-op="/">/</button>
+
+                <button data-number>7</button>
+                <button data-number>8</button>
+                <button data-number>9</button>
+                <button data-operator class="operator" data-op="*">*</button>
+
+                <button data-number>4</button>
+                <button data-number>5</button>
+                <button data-number>6</button>
+                <button data-operator class="operator" data-op="-">-</button>
+
+                <button data-number>1</button>
+                <button data-number>2</button>
+                <button data-number>3</button>
+                <button data-operator class="operator" data-op="+">+</button>
+
+                <button data-operator class="operator" data-op="x²" data-square>x²</button>
+                <button data-number>0</button>
+                <button data-number>.</button>
+                <button data-equals class="equals">=</button>
+            </div>
+        </div>
+
+        <!-- History Panel -->
+        <div class="history-panel p-6">
+            <div class="history-header">
+                <h2 class="text-xl">History</h2>
+                <button data-clear-history class="clear-history-btn">Clear History</button>
+            </div>
+            <div data-history-entries class="history-entries">
+                <!-- History items will be dynamically added here -->
+                <div class="history-item text-white text-center">No history yet.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="p-5 text-center text-lg shadow-inner mt-auto">
+        <div class="container mx-auto flex flex-col items-center">
+            <!-- New Interactive Button (Moved to Top) -->
+            <a href="https://example.com" class="footer-cta-button">
+                Experience the Interactive Calculator
+            </a>
+            <div class="social-icons">
+                <a href="https://mail.google.com/mail/u/0/?fs=1&to=rajendermohan7800@gmail.com&tf=cm" aria-label="Gmail"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/RajenderMohan" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rajender-mohan-verma-10418432a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/rajender_maurya.01/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <span class="copyright-text">&copy; 2025 Free Online Math Calculators Develop by Rajender Mohan Verma. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src = "./assets/scripts.js"></script>
+</body>
+</html>

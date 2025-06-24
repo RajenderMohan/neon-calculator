@@ -1,0 +1,797 @@
+  /* CSS Variables for Theming */
+  :root {
+    /* Dark Theme Defaults */
+    --main-bg-color: #0f0f20;
+    --header-bg-color: #0f0f20;
+    --header-text-color: #00f0ff;
+    --calc-panel-bg: rgba(26, 26, 46, 0.8);
+    --calc-panel-border: rgba(0, 240, 255, 0.3);
+    --calc-panel-shadow1: rgba(0, 240, 255, 0.3);
+    --calc-panel-shadow2: rgba(0, 0, 0, 0.8);
+    --calc-panel-inset-shadow: rgba(0, 240, 255, 0.1);
+
+    --display-bg: #0d0d1a;
+    --current-operand-color: #00f0ff;
+    --prev-operand-color: #7f8fa6;
+    --display-border: rgba(0, 240, 255, 0.2);
+    --display-inset-shadow1: rgba(0, 240, 255, 0.4);
+    --display-inset-shadow2: rgba(0, 0, 0, 0.8);
+
+    --button-num-gradient1: #2e2e4e;
+    --button-num-gradient2: #1a1a2e;
+    --button-num-text-color: #e0e0e0;
+    --button-num-shadow1: rgba(0, 0, 0, 0.5);
+    --button-num-shadow2: rgba(46, 46, 78, 0.4);
+    --button-hover-glow: rgba(0, 240, 255, 0.7);
+    --button-active-inset-shadow1: rgba(0, 0, 0, 0.9);
+    --button-active-inset-shadow2: rgba(46, 46, 78, 0.7);
+    --button-border-color: rgba(0, 240, 255, 0.1); /* New: Default button border */
+
+
+    --operator-gradient1: #00f0ff;
+    --operator-gradient2: #00b0e0;
+    --operator-text-color: #ffffff;
+    --operator-active-shadow: rgba(0, 240, 255, 0.4);
+    --operator-border-color: rgba(0, 240, 255, 0.5); /* New: Operator button border */
+
+
+    --equals-gradient1: #ff00ff;
+    --equals-gradient2: #e000e0;
+    --equals-text-color: #ffffff;
+    --equals-active-shadow: rgba(255, 0, 255, 0.4);
+    --equals-border-color: rgba(255, 0, 255, 0.5); /* New: Equals button border */
+
+
+    --clear-red-gradient1: #ff4444;
+    --clear-red-gradient2: #e03030;
+    --clear-red-text-color: #ffffff;
+    --clear-red-active-shadow: rgba(255, 68, 68, 0.4);
+    --clear-red-border-color: rgba(255, 68, 68, 0.5); /* New: Clear/Backspace button border */
+
+
+    --active-operator-gradient1: #00ff7f;
+    --active-operator-gradient2: #00e060;
+    --active-operator-glow: rgba(0, 255, 127, 1);
+    --active-operator-inset-glow: rgba(255, 255, 255, 1);
+
+    --history-panel-bg: rgba(26, 26, 46, 0.8);
+    --history-panel-border: rgba(0, 240, 255, 0.3);
+    --history-panel-shadow1: rgba(0, 240, 255, 0.3);
+    --history-panel-shadow2: rgba(0, 0, 0, 0.8);
+    --history-panel-inset-shadow: rgba(0, 240, 255, 0.1);
+    --history-header-text: #00f0ff;
+
+    --clear-history-btn-gradient1: #e53e3e;
+    --clear-history-btn-gradient2: #f56565;
+    --clear-history-btn-text: #ffffff;
+    --clear-history-btn-hover-glow: rgba(255, 68, 68, 0.8);
+    --clear-history-btn-active-shadow: rgba(255, 68, 68, 0.4);
+
+    --history-item-bg: #1a1a2e;
+    --history-item-border: rgba(0, 240, 255, 0.1);
+    --history-item-shadow: rgba(0, 0, 0, 0.3);
+    --history-item-hover-glow: rgba(0, 240, 255, 0.5);
+    --history-expression-color: #ffffff;
+    --history-result-color: #ffffff;
+
+    --footer-bg-color: #0f0f20;
+    --footer-text-color: #7f8fa6;
+    --footer-border-color: rgba(0, 240, 255, 0.1);
+    --footer-hover-shadow: rgba(0, 240, 255, 0.3); /* Stronger hover shadow for footer */
+
+    --social-icon-color: #6b7280; /* gray-500 */
+    --social-icon-default-shadow: 0 0 10px rgba(0, 240, 255, 0.4); /* Default shadow for social icons */
+    --social-icon-hover-shadow-intensity: 0.8; /* Adjusted for consistency */
+
+
+    /* Footer CTA Button - Dark Theme */
+    --footer-cta-gradient1: #1a1a3a;
+    --footer-cta-gradient2: #2a2a4a;
+    --footer-cta-text-color: #00f0ff; /* Neon blue */
+    --footer-cta-shadow1: rgba(0, 240, 255, 0.2);
+    --footer-cta-shadow2: rgba(0, 0, 0, 0.6);
+    --footer-cta-text-shadow: 0 0 5px rgba(0, 240, 255, 0.8);
+    --footer-cta-hover-gradient1: #00f0ff; /* Brighter neon blue on hover */
+    --footer-cta-hover-gradient2: #00b0e0;
+    --footer-cta-hover-shadow1: rgba(0, 240, 255, 0.6);
+    --footer-cta-hover-shadow2: rgba(0, 0, 0, 0.9);
+    --footer-cta-hover-text-color: #ffffff; /* White text on hover */
+    --footer-cta-hover-text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    --footer-cta-active-bg: #0088cc; /* Flat blue */
+    --footer-cta-active-shadow1: rgba(0, 0, 0, 0.8);
+    --footer-cta-active-shadow2: rgba(0, 240, 255, 0.4);
+
+    --scroll-thumb: #00f0ff;
+    --scroll-track: #1a1a2e;
+    --theme-toggle-icon-color: #e0e0e0;
+    --theme-toggle-hover-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* Light Theme Overrides */
+body.light-theme {
+    --main-bg-color: #e0e0e0;
+    --header-bg-color: #f0f0f0;
+    --header-text-color: #333333;
+    --calc-panel-bg: rgba(255, 255, 255, 0.9);
+    --calc-panel-border: rgba(0, 0, 0, 0.1);
+    --calc-panel-shadow1: rgba(0, 0, 0, 0.1);
+    --calc-panel-shadow2: rgba(0, 0, 0, 0.2);
+    --calc-panel-inset-shadow: rgba(0, 0, 0, 0.05);
+
+    --display-bg: #f5f5f5;
+    --current-operand-color: #333333;
+    --prev-operand-color: #666666;
+    --display-border: rgba(0, 0, 0, 0.1);
+    --display-inset-shadow1: rgba(0, 0, 0, 0.1);
+    --display-inset-shadow2: rgba(0, 0, 0, 0.2);
+
+    --button-num-gradient1: #fcfcfc;
+    --button-num-gradient2: #e9e9e9;
+    --button-num-text-color: #333333;
+    --button-num-shadow1: rgba(0, 0, 0, 0.15);
+    --button-num-shadow2: rgba(0, 0, 0, 0.08);
+    --button-hover-glow: rgba(0, 150, 255, 0.5);
+    --button-active-inset-shadow1: rgba(0, 0, 0, 0.3);
+    --button-active-inset-shadow2: rgba(0, 0, 0, 0.15);
+    --button-border-color: rgba(0, 0, 0, 0.1); /* New: Default button border */
+
+    --operator-gradient1: #66aaff;
+    --operator-gradient2: #4488dd;
+    --operator-text-color: #ffffff;
+    --operator-active-shadow: rgba(0, 150, 255, 0.4);
+    --operator-border-color: rgba(0, 150, 255, 0.5); /* New: Operator button border */
+
+    --equals-gradient1: #ff88cc;
+    --equals-gradient2: #dd66aa;
+    --equals-text-color: #ffffff;
+    --equals-active-shadow: rgba(255, 100, 200, 0.4);
+    --equals-border-color: rgba(255, 100, 200, 0.5); /* New: Equals button border */
+
+    --clear-red-gradient1: #ff6666;
+    --clear-red-gradient2: #dd4444;
+    --clear-red-text-color: #ffffff;
+    --clear-red-active-shadow: rgba(255, 102, 102, 0.4);
+    --clear-red-border-color: rgba(255, 102, 102, 0.5); /* New: Clear/Backspace button border */
+
+
+    --active-operator-gradient1: #66ffaa;
+    --active-operator-gradient2: #44dd88;
+    --active-operator-glow: rgba(0, 200, 100, 1);
+    --active-operator-inset-glow: rgba(0, 0, 0, 0.8);
+
+    --history-panel-bg: rgba(255, 255, 255, 0.9);
+    --history-panel-border: rgba(0, 0, 0, 0.1);
+    --history-panel-shadow1: rgba(0, 0, 0, 0.1);
+    --history-panel-shadow2: rgba(0, 0, 0, 0.2);
+    --history-panel-inset-shadow: rgba(0, 0, 0, 0.05);
+    --history-header-text: #333333;
+
+    --clear-history-btn-gradient1: #ff6666;
+    --clear-history-btn-gradient2: #dd4444;
+    --clear-history-btn-text: #ffffff;
+    --clear-history-btn-hover-glow: rgba(255, 102, 102, 0.8);
+    --clear-history-btn-active-shadow: rgba(255, 102, 102, 0.4);
+
+    --history-item-bg: #ffffff;
+    --history-item-border: rgba(0, 0, 0, 0.05);
+    --history-item-shadow: rgba(0, 0, 0, 0.1);
+    --history-item-hover-glow: rgba(0, 150, 255, 0.3);
+    --history-expression-color: #555555;
+    --history-result-color: #333333;
+
+    --footer-bg-color: #f0f0f0;
+    --footer-text-color: #555555;
+    --footer-border-color: rgba(0, 0, 0, 0.1);
+    --footer-hover-shadow: rgba(0, 0, 0, 0.2); /* Stronger hover shadow for footer */
+
+    --social-icon-color: #4a5568; /* gray-700 */
+    --social-icon-default-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Default shadow for social icons */
+    --social-icon-hover-shadow-intensity: 0.5; /* Adjusted for consistency */
+
+    /* Footer CTA Button - Light Theme */
+    --footer-cta-gradient1: #f0f0f0;
+    --footer-cta-gradient2: #e0e0e0;
+    --footer-cta-text-color: #333333;
+    --footer-cta-shadow1: rgba(0, 0, 0, 0.1);
+    --footer-cta-shadow2: rgba(0, 0, 0, 0.2);
+    --footer-cta-text-shadow: rgba(255, 255, 255, 0.5);
+    --footer-cta-hover-gradient1: #d0d0d0; /* Darker grey on hover */
+    --footer-cta-hover-gradient2: #c0c0c0;
+    --footer-cta-hover-shadow1: rgba(0, 0, 0, 0.2);
+    --footer-cta-hover-shadow2: rgba(0, 0, 0, 0.3);
+    --footer-cta-hover-text-color: #0f0f20;
+    --footer-cta-hover-text-shadow: rgba(0, 0, 0, 0.2);
+    --footer-cta-active-bg: #a0a0a0; /* Flat darker grey */
+    --footer-cta-active-shadow1: rgba(0, 0, 0, 0.3);
+    --footer-cta-active-shadow2: rgba(0, 0, 0, 0.15);
+
+    --scroll-thumb: #888888;
+    --scroll-track: #f0f0f0;
+    --theme-toggle-icon-color: #333333;
+    --theme-toggle-hover-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* Base Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--main-bg-color); /* Use variable */
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+        radial-gradient(circle at 80% 90%, rgba(255, 255, 255, 0.15) 1.2px, transparent 1.2px),
+        radial-gradient(circle at 50% 40%, rgba(0, 240, 255, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 30% 70%, rgba(0, 240, 255, 0.18) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 70% 30%, rgba(255, 0, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+    background-size: 1000px 1000px, 1200px 1200px, 800px 800px, 900px 900px, 700px 700px, 50px 50px, 50px 50px;
+    background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    animation: starfieldPan 120s linear infinite, gridPan 60s linear infinite;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    color: var(--light-grey-text); /* Default text color */
+}
+
+body.light-theme {
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        radial-gradient(circle at 80% 90%, rgba(0, 0, 0, 0.07) 1.2px, transparent 1.2px),
+        radial-gradient(circle at 50% 40%, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        radial-gradient(circle at 30% 70%, rgba(0, 0, 0, 0.08) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 70% 30%, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+}
+
+/* Starfield movement animation */
+@keyframes starfieldPan {
+    from {
+        background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    }
+    to {
+        background-position: 1000px 1000px, 1200px 1200px, 800px 800px, -900px -900px, -700px -700px, 0 0, 0 0;
+    }
+}
+
+/* Grid movement animation (existing) */
+@keyframes gridPan {
+    from {
+        background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    }
+    to {
+        background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 50px 50px, 50px 50px;
+    }
+}
+
+.main-content-area {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Entry animation for the calculator */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.calculator, .history-panel {
+    animation: fadeInSlideUp 3s ease-out forwards;
+    opacity: 4;
+    transform: translateY(40px) scale(0.95);
+    background-color: var(--calc-panel-bg); /* Use variable */
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    border-radius: 2rem;
+    box-shadow:
+        0 0 50px var(--calc-panel-shadow1), /* Use variable */
+        0 0 20px var(--calc-panel-shadow2), /* Use variable */
+        inset 0 0 15px var(--calc-panel-inset-shadow); /* Use variable */
+    border: 1px solid var(--calc-panel-border); /* Use variable */
+    width: 100%;
+    padding: 2rem;
+}
+
+@media (min-width: 768px) {
+    .calculator {
+        max-width: 28rem;
+    }
+    .history-panel {
+        max-width: 20rem;
+    }
+}
+
+.calculator-grid button {
+    @apply p-4 rounded-xl text-2xl font-bold transition-all duration-200 ease-in-out transform;
+    background: linear-gradient(145deg, var(--button-num-gradient1), var(--button-num-gradient2)); /* Use variables */
+    color: var(--button-num-text-color); /* Use variable */
+    box-shadow: 7px 7px 18px var(--button-num-shadow1), -7px -7px 18px var(--button-num-shadow2); /* Use variables */
+    border: 1px solid var(--button-border-color); /* New: Apply default button border */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    padding: auto;
+    margin: 0.3rem;
+}
+
+.calculator-grid button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(0, 240, 255, 0.3) 0%, transparent 70%); /* Stays neon blue glow for all buttons */
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+    transform: scale(0);
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+.calculator-grid button:hover::before {
+    transform: scale(1);
+    opacity: 1;
+    border-radius: 50%;
+}
+
+.calculator-grid button:active::before {
+    transform: scale(0.8);
+    opacity: 0.5;
+    border-radius: 50%;
+}
+
+.calculator-grid button:hover {
+    @apply scale-105;
+    box-shadow: 0 0 35px var(--button-hover-glow), 0 0 15px var(--button-active-inset-shadow1); /* Use variables */
+    border-color: var(--button-hover-glow); /* New: Border color changes on hover */
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.calculator-grid button:active {
+    @apply scale-95;
+    background: linear-gradient(145deg, var(--button-num-gradient2), var(--button-num-gradient1)); /* Reversed gradient for pressed effect */
+    box-shadow: inset 6px 6px 12px var(--button-active-inset-shadow1), inset -6px -6px 12px var(--button-active-inset-shadow2); /* Use variables */
+    border-color: var(--button-active-inset-shadow2); /* New: Border color changes on active */
+    z-index: 10;
+}
+
+.calculator-grid button.operator {
+    background: linear-gradient(145deg, var(--operator-gradient1), var(--operator-gradient2)); /* Use variables */
+    color: var(--operator-text-color); /* Use variable */
+    text-shadow: 0 0 10px var(--operator-text-color); /* Adjust based on new color */
+    border: 1px solid var(--operator-border-color); /* New: Operator button border */
+    border-radius: 50%;
+}
+
+.calculator-grid button.operator:hover {
+    background: linear-gradient(145deg, var(--operator-gradient2), var(--operator-gradient1)); /* Darker/reversed */
+    box-shadow: 0 0 45px var(--button-hover-glow), 0 0 20px var(--button-active-inset-shadow1);
+    border-color: var(--button-hover-glow); /* New: Border color changes on hover */
+}
+
+.calculator-grid button.operator:active {
+    background: var(--operator-gradient2); /* Flat, pressed */
+    box-shadow: inset 6px 6px 12px var(--button-active-inset-shadow1), inset -6px -6px 12px var(--operator-active-shadow);
+    border-color: var(--operator-active-shadow); /* New: Border color changes on active */
+}
+
+.calculator-grid button.operator.active-operator {
+    background: linear-gradient(145deg, var(--active-operator-gradient1), var(--active-operator-gradient2)); /* Use variables */
+    box-shadow: 0 0 55px var(--active-operator-glow), inset 0 0 20px var(--active-operator-inset-glow); /* Use variables */
+    transform: scale(1.1);
+    border-color: var(--active-operator-glow); /* New: Border for active operator */
+}
+
+.calculator-grid button.equals {
+    background: linear-gradient(145deg, var(--equals-gradient1), var(--equals-gradient2)); /* Use variables */
+    color: var(--equals-text-color); /* Use variable */
+    text-shadow: 0 0 10px var(--equals-text-color);
+    border: 1px solid var(--equals-border-color); /* New: Equals button border */
+}
+
+.calculator-grid button.equals:hover {
+    background: linear-gradient(145deg, var(--equals-gradient2), var(--equals-gradient1));
+    box-shadow: 0 0 45px var(--equals-gradient1), 0 0 20px var(--button-active-inset-shadow1);
+    border-color: var(--equals-gradient1); /* New: Border color changes on hover */
+}
+
+.calculator-grid button.equals:active {
+    background: var(--equals-gradient2);
+    box-shadow: inset 6px 6px 12px var(--button-active-inset-shadow1), inset -6px -6px 12px var(--equals-active-shadow);
+    border-color: var(--equals-active-shadow); /* New: Border color changes on active */
+}
+
+.calculator-grid button.clear,
+.calculator-grid button.backspace {
+    background: linear-gradient(145deg, var(--clear-red-gradient1), var(--clear-red-gradient2)); /* Use variables */
+    color: var(--clear-red-text-color); /* Use variable */
+    text-shadow: 0 0 10px var(--clear-red-text-color);
+    border: 1px solid var(--clear-red-border-color); /* New: Clear/Backspace button border */
+}
+
+.calculator-grid button.clear:hover,
+.calculator-grid button.backspace:hover {
+    background: linear-gradient(145deg, var(--clear-red-gradient2), var(--clear-red-gradient1));
+    box-shadow: 0 0 45px var(--clear-red-gradient1), 0 0 20px var(--button-active-inset-shadow1);
+    border-color: var(--clear-red-gradient1); /* New: Border color changes on hover */
+}
+
+.calculator-grid button.clear:active,
+.calculator-grid button.backspace:active {
+    background: var(--clear-red-gradient2);
+    box-shadow: inset 6px 6px 12px var(--button-active-inset-shadow1), inset -6px -6px 12px var(--clear-red-active-shadow);
+    border-color: var(--clear-red-active-shadow); /* New: Border color changes on active */
+}
+
+.calculator-display {
+    background-color: var(--display-bg); /* Use variable */
+    color: var(--current-operand-color); /* Use variable */
+    @apply p-6 rounded-xl mb-6 overflow-hidden;
+    font-size: 2.8rem;
+    word-wrap: break-word;
+    position: relative;
+    border: 1px solid var(--display-border); /* Use variable */
+    box-shadow: inset 0 0 20px var(--display-inset-shadow1), inset 0 0 5px var(--display-inset-shadow2); /* Use variables */
+}
+
+.calculator-display .previous-operand {
+    font-size: 1.6rem;
+    color: var(--prev-operand-color); /* Use variable */
+    min-height: 1.5em;
+    transition: color 0.3s ease-out;
+    text-shadow: 0 0 8px var(--prev-operand-color); /* Use variable */
+    text-align: right;
+}
+
+.calculator-display .current-operand {
+    font-size: 2.2rem;
+    min-height: 1.2em;
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out, color 0.2s ease-out;
+    text-shadow: 0 0 20px var(--current-operand-color), 0 0 30px var(--current-operand-color); /* Use variable */
+    text-align: right;
+}
+
+/* Result pulse animation */
+@keyframes resultPulse {
+    0% { transform: scale(1); text-shadow: 0 0 20px var(--current-operand-color); }
+    50% { transform: scale(1.05); text-shadow: 0 0 40px var(--current-operand-color), 0 0 50px var(--active-operator-glow); }
+    100% { transform: scale(1); text-shadow: 0 0 20px var(--current-operand-color); }
+}
+
+.calculator-display .current-operand.result-animate {
+    animation: resultPulse 0.5s ease-out;
+}
+
+/* Error specific animations */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    50% { transform: translateX(8px); }
+    75% { transform: translateX(-8px); }
+    100% { transform: translateX(0); }
+}
+
+.calculator-display .error-shake {
+    animation: shake 0.4s ease-in-out;
+    color: var(--error-red-color); /* Use variable */
+    text-shadow: 0 0 25px var(--error-red-color), 0 0 45px var(--error-red-color); /* Use variable */
+}
+
+/* History Panel Styles */
+.history-panel {
+    min-height: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--history-panel-bg); /* Use variable */
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    border-radius: 2rem;
+    box-shadow:
+        0 0 50px var(--history-panel-shadow1),
+        0 0 20px var(--history-panel-shadow2),
+        inset 0 0 15px var(--history-panel-inset-shadow);
+    border: 1px solid var(--history-panel-border);
+    padding: 2rem;
+    width: 100%;
+    max-width: 24rem;
+    animation: fadeInSlideUp 5s ease-out forwards;
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: opacity 1.5s ease-out, transform 0.5s ease-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 1; /* Ensure it appears above other content */
+    margin-top: 2rem; /* Add margin to separate from calculator */
+    margin-bottom: 2rem; /* Add margin to separate from footer */
+    /* Add a history scroll bar */
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) var(--scroll-track); /* Use variables */
+    padding-right: 1.0rem; /* Add padding to prevent content from being hidden behind scrollbar */
+    padding-left: 1.5rem;
+    /* Add a subtle glow effect to the history panel */
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3), 0 0 10px rgba(0, 0, 0, 0.2); /* Use variable */    
+}
+
+.history-header {
+    @apply flex justify-between items-center pb-2 border-b;
+    border-bottom-color: var(--history-panel-border); /* Use variable */
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.history-header h2 {
+    @apply text-xl font-bold;
+    color: var(--history-header-text); /* Use variable */
+    text-shadow: 0 0 10px var(--history-header-text); /* Use variable */
+    text-align: center;
+    margin : 5px 0; /* Add margin for spacing */
+}
+
+.clear-history-btn {
+    @apply px-4 py-2 rounded-lg .text-sm-center font-semibold transition-all duration-300 ease-in-out transform;
+    background: linear-gradient(145deg, var(--clear-history-btn-gradient1), var(--clear-history-btn-gradient2)); /* Use variables */
+    color: var(--clear-history-btn-text); /* Use variable */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4), -3px -3px 8px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.clear-history-btn:hover {
+    @apply scale-105;
+    background: linear-gradient(145deg, var(--clear-history-btn-gradient2), var(--clear-history-btn-gradient1));
+    box-shadow: 0 0 15px var(--clear-history-btn-hover-glow), 0 0 5px rgba(0, 0, 0, 0.6); /* Use variable */
+    border-radius: 50%;
+}
+
+.clear-history-btn:active {
+    @apply scale-95;
+    background: var(--clear-history-btn-gradient2);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.6), inset -2px -2px 5px var(--clear-history-btn-active-shadow); /* Use variable */
+}
+
+.history-entries {
+    flex-grow: 1;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) var(--scroll-track); /* Use variables */
+    padding-right: 0.5rem;
+}
+
+.history-entries::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: var(--scroll-track); /* Use variable */
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for scrollbar */
+    transition: background-color 0.3s ease-in-out;
+
+}
+
+.history-entries::-webkit-scrollbar-track {
+    background: var(--scroll-track); /* Use variable */
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for scrollbar track */
+    transition: background-color 0.3s ease-in-out;
+    
+}
+
+.history-entries::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb); /* Use variable */
+    border-radius: 10px;
+    border: 2px solid var(--scroll-track); /* Use variable */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for scrollbar thumb */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.history-item {
+    @apply p-3 rounded-lg mb-2 last:mb-0;
+    background-color: var(--history-item-bg); /* Use variable */
+    border: 1px solid var(--history-item-border); /* Use variable */
+    box-shadow: 0 2px 10px var(--history-item-shadow); /* Use variable */
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.history-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 15px var(--history-item-shadow), 0 0 10px var(--history-item-hover-glow); /* Use variable */
+    background-color: rgba(0, 240, 255, 0.3); /* Slightly lighter on hover */
+    z-index: 1; /* Ensure it appears above other items */
+    border-radius: 1rem; /* Rounded corners on hover */
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease-out;
+}
+
+.history-expression {
+    @apply .text-lg-center font-semibold;
+    color: var(--history-expression-color); /* Use variable */
+    text-shadow: 0 0 5px var(--history-expression-color); /* Use variable */
+}
+
+.history-result {
+    @apply text-lg font-semibold;
+    color: var(--history-result-color); /* Use variable */
+    text-shadow: 0 0 8px var(--history-result-color); /* Use variable */
+}
+
+/* Social media icons */
+.social-icons {
+    @apply flex justify-center items-center gap-x-16; /* Increased gap-x to 16 (64px) */
+    margin-top: 1.5rem; /* Kept existing margin-top */
+    margin-bottom: 1.5rem; /* Added margin-bottom for spacing */
+    padding: 0.5rem; /* Added padding for better spacing */
+    position: relative;
+    z-index: 10; /* Ensure it appears above other content */
+    display: flex;
+    flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+    justify-content: center; /* Center the icons */
+    align-items: center; /* Center the icons vertically */
+    gap: 1.5rem; /* Increased gap for better spacing */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for social icons */
+    border-radius: 1rem; /* Rounded corners for social icons container */
+    
+}
+
+.social-icons a {
+    color: var(--social-icon-color); /* Use variable */
+    @apply transition-all duration-300; /* Removed mx-4 here */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Ensure the icon is treated as a block for hover effects */    
+    
+}
+
+/* Keyframe for the pop effect */
+@keyframes iconPop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.social-icons a:hover i {
+    animation: iconPop 0.3s ease-out;
+    transform: scale(1.2);
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 30px rgba(0, 0, 0, var(--social-icon-hover-shadow-intensity)); /* Use variable for hover shadow */
+    color: var(--social-icon-color); /* Ensure color remains consistent on hover */
+    transition: transform 0.3s ease-out, text-shadow 0.3s ease-out, color 0.3s ease-out;
+    /* Added transition for smooth hover effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.05); /* Subtle shadow on hover */
+    border-radius: 50%; /* Rounded corners on hover */
+}
+
+.social-icons i {
+    font-size: 1.7rem;
+    text-shadow: var(--social-icon-default-shadow); /* Use variable for default shadow */
+    transition: transform 0.3s ease-out, text-shadow 0.3s ease-out, color 0.3s ease-out;
+}
+
+/* Specific hover colors for social media icons */
+.social-icons a[aria-label="Gmail"]:hover i {
+    color: #EA4335;
+    text-shadow: 0 0 20px #EA4335, 0 0 30px rgba(234, 67, 53, var(--social-icon-hover-shadow-intensity));
+}
+
+.social-icons a[aria-label="GitHub"]:hover i {
+    color: #181717;
+    text-shadow: 0 0 20px #ffffff, 0 0 30px rgba(24, 23, 23, var(--social-icon-hover-shadow-intensity));
+}
+
+.social-icons a[aria-label="LinkedIn"]:hover i {
+    color: #0A66C2;
+    text-shadow: 0 0 20px #0A66C2, 0 0 30px rgba(10, 102, 194, 0.8);
+}
+
+.social-icons a[aria-label="Instagram"]:hover i {
+    color: #E1306C;
+    text-shadow: 0 0 20px #E1306C, 0 0 30px rgba(225, 48, 108, 0.8);
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--footer-bg-color); /* Use variable */
+    border-bottom: 1px solid var(--footer-border-color); /* Use variable */
+    border-top: 1px solid var(--footer-border-color); /* Use variable */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    color: var(--footer-text-color); /* Use variable */
+    text-align: center;
+    position: relative;
+    
+}
+
+footer:hover {
+    box-shadow: 0 -8px 25px var(--footer-hover-shadow); /* Use variable */
+}
+/* New: Copyright text specific styles and animation */
+.copyright-text {
+    transition: transform 0.3s ease-out, text-shadow 0.3s ease-out, color 0.3s ease-out;
+    display: inline-block; /* Needed for transform to work on text */
+}
+
+.copyright-text:hover {
+    transform: scale(1.03); /* Slight zoom on hover */
+    text-shadow: 0 0 8px var(--footer-text-color); /* Stronger text shadow on hover */
+    color: var(--header-text-color); /* Maybe a subtle color change to neon */
+}
+
+header {
+    background-color: var(--header-bg-color); /* Use variable */
+    color: var(--header-text-color); /* Use variable */
+}
+
+header h1 {
+    color: var(--header-text-color); /* Use variable */
+    text-shadow: 0 0 20px var(--header-text-color), 0 0 35px var(--header-text-color); /* Use variable */
+}
+
+/* Footer CTA Button */
+.footer-cta-button {
+    /* Adjusted mt and mb for increased margin, px and py for increased padding */
+    @apply mt-8 mb-8 px-12 py-5 rounded-full text-xl font-bold transition-all duration-300 ease-in-out transform;
+    background: linear-gradient(135deg, var(--footer-cta-gradient1), var(--footer-cta-gradient2)); /* Use variables */
+    color: var(--footer-cta-text-color); /* Use variable */
+    box-shadow: 0 8px 20px var(--footer-cta-shadow1), 0 4px 10px var(--footer-cta-shadow2); /* Use variables */
+    text-shadow: 0 0 8px var(--footer-cta-text-shadow); /* Use variable */
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    letter-spacing: 0.12em;
+}
+
+.footer-cta-button:hover {
+    @apply scale-105;
+    background: linear-gradient(135deg, var(--footer-cta-hover-gradient1), var(--footer-cta-hover-gradient2)); /* Use variables */
+    box-shadow: 0 12px 25px var(--footer-cta-hover-shadow1), 0 6px 15px var(--footer-cta-hover-shadow2); /* Use variables */
+    color: var(--footer-cta-hover-text-color); /* Use variable */
+    text-shadow: 0 0 15px var(--footer-cta-hover-text-shadow); /* Use variable */
+    border-radius: 30%; /* Rounded corners on hover */
+}   
+.footer-cta-button:active {
+    @apply scale-95;
+    background: var(--footer-cta-active-bg); /* Use variable */
+    box-shadow: inset 4px 4px 10px var(--footer-cta-active-shadow1), inset -4px -4px 10px var(--footer-cta-active-shadow2); /* Use variables */
+}
+
+/* Theme Toggle Button Style */
+#theme-toggle {
+    color: var(--theme-toggle-icon-color); /* Use variable */
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#theme-toggle:hover {
+    background-color: var(--theme-toggle-hover-bg); /* Use variable */
+}
+
+/* Header layout for theme toggle */
+header .container {
+    display: flex;
+    justify-content: space-between; /* Pushes children to ends */
+    align-items: center;
+}
+
+header .container h1 {
+    flex-grow: 1; /* Allows h1 to take available space and center */
+}
